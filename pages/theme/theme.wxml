@@ -1,0 +1,36 @@
+<!--pages/theme/theme.wxml-->
+<view>
+      <swiper autoplay="true" indicator-dots="true" interval="5000" duration="1000" width="100%" height="200rpx" class="swiper">
+    <block wx:for="{{themeSwiper}}" wx:key="{{news_id}}">
+      <swiper-item>
+      <navigator url="../article/article?news_id={{item.id}}">
+        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.images}}"></image>
+        </navigator>
+        <text class="alt">{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="indexList">
+    <view>
+        <text class="topicTitle">主编：</text>
+        <block wx:for="{{themes.editors}}">
+            <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.avatar}}" class="editor_img"></image>
+        </block>
+    </view>
+<navigator wx:for="{{stories}}" url="../article/article?news_id={{item.id}}">
+  <block wx:if="{{item.images != null}}">
+    <view class="hotList">
+      <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.images}}" ></image>
+      <text>{{item.title}}</text>
+    </view>   
+  </block>
+  <block wx:else>
+    <view class="hotList2">
+      <text>{{item.title}}</text>
+    </view>
+  </block>  
+</navigator>
+
+  </view>
+</view>

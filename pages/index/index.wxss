@@ -1,0 +1,50 @@
+/**index.wxss**/
+  /*background: -webkit-linear-gradient(bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0));*/
+.swiper image{
+    width: 100%;
+}
+.alt{
+    width: 100%;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px 10px 10px;
+    position: absolute;
+    bottom: 20px;
+    background-color: rgba(153, 153, 153, 0.2)
+}
+.indexList{
+    margin-top: 10px;
+}
+.topicTitle{
+    font-size: 16px;
+    font-weight: bolder;
+    margin-left: 5px;
+    color: #444;
+}
+.articleTime{
+    height: 20px;
+    color: #999;
+    font-size: 14px;
+    padding: 10px 0px 0px 5px;
+}
+.hotList{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-top: 10px;
+    padding: 0px 5px 5px 5px; 
+    border-bottom: 1px solid #03a9f4;
+}
+
+.hotList image{
+    width:70px;
+    height:60px
+}
+
+.hotList text{
+    width: 75%;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #444;
+}

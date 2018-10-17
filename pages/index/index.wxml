@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper autoplay="true" indicator-dots="true" interval="5000" duration="1000"  class="swiper">
+    <block wx:for="{{top_stories}}" wx:key="{{id}}">
+      <swiper-item >
+      <navigator url="../article/article?news_id={{item.id}}">
+        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+      </navigator>
+      <text class="alt">{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="indexList">
+    <text class="topicTitle">精选文章</text>
+    <block wx:for="{{articleList}}" wx:key="{{id}}" >
+    <view wx:if="{{item.id==null}}" class="articleTime">
+      {{item.dateDay}}
+    </view>
+    <block  wx:else>
+    <navigator  url="../article/article?news_id={{item.id}}">
+      <view class="hotList" >
+        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.images}}" ></image>
+        <text>{{item.title}}</text>
+      </view>
+    </navigator>
+    </block>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/themesList/themesList.wxml-->
+<view class="themesList">
+<navigator wx:for="{{themesList}}" url="../theme/theme?id={{item.id}}" >
+    <view class="theme" >
+        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.thumbnail}}"></image>
+        <view class="theme_intro">
+            <text class="theme_intro_tit">{{item.name}}</text>
+            <text class="theme_intro_content">{{item.description}}</text>
+        </view>
+    </view>
+</navigator>
+</view>
